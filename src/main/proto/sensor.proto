@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.inspur.protos;
+
+message Sensor{
+    State state = 1;
+    string client = 2;
+    uint64 timestamp = 3;
+}
+
+message State{
+    Reported reported = 1;
+}
+
+message Reported{
+    double temperature = 1;
+    double humidity = 2;
+}
